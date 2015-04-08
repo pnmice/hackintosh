@@ -1,12 +1,13 @@
 #!/bin/sh
 
-kexts={AppleIntelFramebufferCapri.kext,AppleIntelSNBGraphicsFB.kext}
 dirEx="/System/Library/Extensions"
 
-sudo bash
-sudo cp -R intel3000.4000.driver.10.10.1/$kexts $dirEx/
-sudo chmod -R 755 $dirEx/$kexts
-sudo chown -R root:wheel $dirEx/$kexts 
+sudo cp -R intel3000.4000.driver.10.10.1/AppleIntelFramebufferCapri.kext $dirEx/
+sudo cp -R intel3000.4000.driver.10.10.1/AppleIntelSNBGraphicsFB.kext $dirEx/
+sudo chmod -R 755 $dirEx/AppleIntelFramebufferCapri.kext
+sudo chmod -R 755 $dirEx/AppleIntelSNBGraphicsFB.kext
+sudo chown -R root:wheel $dirEx/AppleIntelFramebufferCapri.kext
+sudo chown -R root:wheel $dirEx/AppleIntelSNBGraphicsFB.kext
 sudo rm -R $dirEx/Extensions.kextcache
 sudo rm -R $dirEx/Extensions.mkext
 

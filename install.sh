@@ -18,6 +18,7 @@ sudo diskutil repairPermissions /Volumes/New\ Volume
 #Apple recomendation rebuild cache
 #sudo touch /System/Library/Extensions
 #sudo kextcache -update-volume /
-sudo rm -r /System/Library/Caches/com.apple.kext.caches
+sudo rm -r /System/Library/Caches/*
+sudo nvram -d boot-args
 sudo reboot
 
